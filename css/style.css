@@ -551,9 +551,6 @@ select {
     padding: 50px 30px;
   }
 }
-/* =========================
-   RESPONSIVIDADE EXTRA
-========================= */
 
 @media (max-width: 768px) {
   .container {
@@ -617,10 +614,6 @@ select {
     transform: translateX(50%);
   }
 }
-
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 576px) {
   h1 {
@@ -707,10 +700,6 @@ select {
     min-width: 180px;
   }
 }
-
-/* =========================
-   TELAS MUITO PEQUENAS
-========================= */
 
 @media (max-width: 400px) {
   h1 {

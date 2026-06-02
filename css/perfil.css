@@ -1,7 +1,3 @@
-/* =========================
-   RESET
-========================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -26,10 +22,6 @@ body {
   position: relative;
 }
 
-/* =========================
-   FUNDO DECORATIVO
-========================= */
-
 body::before {
   content: "";
 
@@ -49,10 +41,6 @@ body::before {
 
   z-index: -1;
 }
-
-/* =========================
-   BOTÃO VOLTAR
-========================= */
 
 .top-actions {
   display: flex;
@@ -107,10 +95,6 @@ body.dark .btn-voltar:hover {
   border-color: #2563eb;
 }
 
-/* =========================
-   CONTAINER
-========================= */
-
 .perfil-container {
   width: 100%;
   max-width: 850px;
@@ -120,10 +104,6 @@ body.dark .btn-voltar:hover {
 
   gap: 24px;
 }
-
-/* =========================
-   HEADER
-========================= */
 
 .perfil-header {
   background: rgba(255, 255, 255, 0.75);
@@ -161,10 +141,6 @@ body.dark .btn-voltar:hover {
   color: #0f172a;
 }
 
-/* =========================
-   CARDS
-========================= */
-
 .card {
   background: #ffffff;
 
@@ -193,10 +169,6 @@ body.dark .btn-voltar:hover {
   font-size: 1.3rem;
 }
 
-/* =========================
-   INFORMAÇÕES
-========================= */
-
 .card p {
   margin-bottom: 12px;
 
@@ -208,10 +180,6 @@ body.dark .btn-voltar:hover {
 .card strong {
   color: #0f172a;
 }
-
-/* =========================
-   FORMULÁRIO
-========================= */
 
 .form-group {
   display: flex;
@@ -250,10 +218,6 @@ body.dark .btn-voltar:hover {
 
   box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
 }
-
-/* =========================
-   BOTÕES
-========================= */
 
 .btn {
   width: 100%;
@@ -299,10 +263,6 @@ body.dark .btn-voltar:hover {
   background: #eff6ff;
 }
 
-/* =========================
-   LOGOUT
-========================= */
-
 .btn-sair {
   width: 100%;
 
@@ -329,10 +289,6 @@ body.dark .btn-voltar:hover {
   transform: translateY(-2px);
 }
 
-/* =========================
-   MENSAGEM
-========================= */
-
 #mensagem {
   text-align: center;
 
@@ -340,10 +296,6 @@ body.dark .btn-voltar:hover {
 
   min-height: 24px;
 }
-
-/* =========================
-   DARK MODE
-========================= */
 
 body.dark {
   background: #0f172a;
@@ -376,10 +328,6 @@ body.dark input {
 
   color: white;
 }
-
-/* =========================
-   RESPONSIVO
-========================= */
 
 @media (max-width: 768px) {
   .perfil-header {

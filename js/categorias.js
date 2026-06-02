@@ -1,7 +1,3 @@
-// ========================================
-// LOCAL STORAGE
-// ========================================
-
 const STORAGE_KEY = "categorias";
 
 const categoriasPadrao = [
@@ -39,17 +35,9 @@ function salvarCategorias() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(categorias));
 }
 
-// ========================================
-// VARIÁVEIS GLOBAIS
-// ========================================
-
 let idEditando = null;
 let idExcluindo = null;
 let corSelecionada = "#3b82f6";
-
-// ========================================
-// RENDERIZAR
-// ========================================
 
 function renderizar() {
   const grade = document.getElementById("grade-categorias");
@@ -128,10 +116,6 @@ function renderizar() {
   atualizarEstatisticas();
 }
 
-// ========================================
-// ESTATÍSTICAS
-// ========================================
-
 function atualizarEstatisticas() {
   const total = categorias.length;
 
@@ -149,10 +133,6 @@ function atualizarEstatisticas() {
     document.getElementById("top-nome").textContent = top.nome;
   }
 }
-
-// ========================================
-// MODAL
-// ========================================
 
 function abrirModal(id = null) {
   idEditando = id;
@@ -194,10 +174,6 @@ function fecharModal() {
   idEditando = null;
 }
 
-// ========================================
-// CORES
-// ========================================
-
 function selecionarCor(cor, botao) {
   corSelecionada = cor;
 
@@ -207,10 +183,6 @@ function selecionarCor(cor, botao) {
 
   botao.classList.add("selecionada");
 }
-
-// ========================================
-// SALVAR
-// ========================================
 
 function salvarCategoria() {
   const nome = document.getElementById("campo-nome").value.trim();
@@ -263,10 +235,6 @@ function editarCategoria(id) {
   abrirModal(id);
 }
 
-// ========================================
-// EXCLUIR
-// ========================================
-
 function pedirExclusao(id) {
   idExcluindo = id;
 
@@ -299,10 +267,6 @@ function confirmarExclusao() {
   mostrarToast(`"${nome}" excluída.`);
 }
 
-// ========================================
-// VER NOTAS
-// ========================================
-
 function verNotas(id) {
   const categoria = categorias.find((c) => c.id === id);
 
@@ -314,10 +278,6 @@ function verNotas(id) {
     window.location.href = "notas.html";
   }, 1000);
 }
-
-// ========================================
-// TOAST
-// ========================================
 
 function mostrarToast(msg) {
   const toast = document.getElementById("toast");
@@ -331,17 +291,9 @@ function mostrarToast(msg) {
   }, 2500);
 }
 
-// ========================================
-// ESCAPAR HTML
-// ========================================
-
 function escaparHtml(str) {
   return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
-
-// ========================================
-// TECLADO
-// ========================================
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
@@ -349,9 +301,5 @@ document.addEventListener("keydown", (e) => {
     fecharExcluir();
   }
 });
-
-// ========================================
-// INICIAR
-// ========================================
 
 renderizar();

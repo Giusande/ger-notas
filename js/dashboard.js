@@ -10,10 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   carregarUltimasNotas();
 });
 
-// ======================================
-// USUÁRIO
-// ======================================
-
 function carregarUsuario() {
   if (users.length === 0) return;
 
@@ -25,10 +21,6 @@ function carregarUsuario() {
     .charAt(0)
     .toUpperCase();
 }
-
-// ======================================
-// RESUMO
-// ======================================
 
 function carregarResumo() {
   document.getElementById("totalNotes").textContent = notes.length;
@@ -49,10 +41,6 @@ function carregarResumo() {
     document.getElementById("lastNote").textContent = "-";
   }
 }
-
-// ======================================
-// ÚLTIMAS NOTAS
-// ======================================
 
 function carregarUltimasNotas() {
   const container = document.getElementById("recentNotesList");
@@ -93,10 +81,6 @@ function carregarUltimasNotas() {
     `;
   });
 }
-
-// ======================================
-// LOGOUT
-// ======================================
 
 document.getElementById("logoutBtn")?.addEventListener("click", () => {
   if (confirm("Deseja sair da conta?")) {

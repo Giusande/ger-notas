@@ -1,7 +1,3 @@
-// ========================================
-// STORAGE
-// ========================================
-
 const NOTES_KEY = "notes";
 const CATEGORIES_KEY = "categorias";
 
@@ -10,10 +6,6 @@ let notes = JSON.parse(localStorage.getItem(NOTES_KEY)) || [];
 let categorias = JSON.parse(localStorage.getItem(CATEGORIES_KEY)) || [];
 
 let editandoId = null;
-
-// ========================================
-// ELEMENTOS
-// ========================================
 
 const modal = document.getElementById("modal");
 const notesGrid = document.querySelector(".notes-grid");
@@ -26,9 +18,6 @@ const cancelBtn = document.querySelector(".cancel");
 
 const searchInput = document.getElementById("search");
 
-// ========================================
-// CARREGAR CATEGORIAS
-// ========================================
 
 function carregarCategorias() {
   const select = document.getElementById("noteCategory");
@@ -45,10 +34,6 @@ function carregarCategorias() {
     `;
   });
 }
-
-// ========================================
-// MODAL
-// ========================================
 
 function abrirModal() {
   editandoId = null;
@@ -69,10 +54,6 @@ function fecharModal() {
 openModalBtn?.addEventListener("click", abrirModal);
 
 cancelBtn?.addEventListener("click", fecharModal);
-
-// ========================================
-// SALVAR NOTAS
-// ========================================
 
 function salvarNota(e) {
   e.preventDefault();
@@ -124,17 +105,9 @@ function salvarNota(e) {
   fecharModal();
 }
 
-// ========================================
-// SALVAR LOCAL STORAGE
-// ========================================
-
 function salvarNotas() {
   localStorage.setItem(NOTES_KEY, JSON.stringify(notes));
 }
-
-// ========================================
-// RENDERIZAR NOTAS
-// ========================================
 
 function renderizarNotas() {
   if (!notesGrid) return;
@@ -247,10 +220,6 @@ function renderizarNotas() {
   });
 }
 
-// ========================================
-// EDITAR
-// ========================================
-
 function editarNota(id) {
   const nota = notes.find((n) => n.id === id);
 
@@ -269,10 +238,6 @@ function editarNota(id) {
   modal.classList.add("active");
 }
 
-// ========================================
-// EXCLUIR
-// ========================================
-
 function excluirNota(id) {
   const confirmar = confirm("Deseja excluir esta nota?");
 
@@ -287,10 +252,6 @@ function excluirNota(id) {
   renderizarNotas();
 }
 
-// ========================================
-// FAVORITAR
-// ========================================
-
 function toggleFavorite(id) {
   const nota = notes.find((n) => n.id === id);
 
@@ -302,10 +263,6 @@ function toggleFavorite(id) {
 
   renderizarNotas();
 }
-
-// ========================================
-// FIXAR
-// ========================================
 
 function togglePinned(id) {
   const nota = notes.find((n) => n.id === id);
@@ -319,10 +276,6 @@ function togglePinned(id) {
   renderizarNotas();
 }
 
-// ========================================
-// PESQUISA
-// ========================================
-
 searchInput?.addEventListener("input", (e) => {
   const termo = e.target.value.toLowerCase();
 
@@ -335,10 +288,6 @@ searchInput?.addEventListener("input", (e) => {
   });
 });
 
-// ========================================
-// CONTADOR DE CATEGORIAS
-// ========================================
-
 function atualizarContadoresCategorias() {
   categorias.forEach((cat) => {
     cat.notas = notes.filter((nota) => nota.categoryId === cat.id).length;
@@ -347,23 +296,11 @@ function atualizarContadoresCategorias() {
   localStorage.setItem(CATEGORIES_KEY, JSON.stringify(categorias));
 }
 
-// ========================================
-// DASHBOARD
-// ========================================
-
 function atualizarDashboard() {
   localStorage.setItem("dashboard_last_update", Date.now());
 }
 
-// ========================================
-// EVENTOS
-// ========================================
-
 noteForm?.addEventListener("submit", salvarNota);
-
-// ========================================
-// INICIALIZAÇÃO
-// ========================================
 
 carregarCategorias();
 

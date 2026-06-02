@@ -1,7 +1,3 @@
-/* =========================
-   RESET
-========================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -14,31 +10,18 @@ body {
   color: #0f172a;
 }
 
-/* =========================
-   LAYOUT
-========================= */
-
 .layout {
   display: flex;
   min-height: 100vh;
 }
 
-/* =========================
-   SIDEBAR
-========================= */
-
 .sidebar {
   width: 280px;
-
   background: #1e293b;
-
   padding: 30px 20px;
-
   display: flex;
   flex-direction: column;
-
   position: fixed;
-
   left: 0;
   top: 0;
   bottom: 0;
@@ -46,49 +29,36 @@ body {
 
 .logo {
   color: white;
-
   font-size: 1.5rem;
-
   font-weight: 700;
-
   margin-bottom: 50px;
 }
 
 .sidebar nav {
   display: flex;
   flex-direction: column;
-
   gap: 10px;
 }
 
 .sidebar nav a {
   height: 52px;
-
   display: flex;
   align-items: center;
-
   gap: 12px;
-
   padding: 0 18px;
-
   color: #cbd5e1;
-
   text-decoration: none;
-
   border-radius: 14px;
-
   transition: 0.25s;
 }
 
 .sidebar nav a:hover {
   background: rgba(255, 255, 255, 0.08);
-
   color: white;
 }
 
 .sidebar nav a.active {
   background: #3b82f6;
-
   color: white;
 }
 
@@ -96,66 +66,41 @@ body {
   font-size: 1.2rem;
 }
 
-/* =========================
-   CONTENT
-========================= */
-
 .content {
   flex: 1;
-
   margin-left: 280px;
-
   padding: 30px;
 }
 
-/* =========================
-   TOPBAR
-========================= */
-
 .topbar {
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   margin-bottom: 35px;
 }
 
 .search-box {
   width: 450px;
-
   height: 54px;
-
   background: white;
-
   border: 1px solid #e2e8f0;
-
   border-radius: 16px;
-
   display: flex;
   align-items: center;
-
   gap: 12px;
-
   padding: 0 18px;
 }
 
 .search-box i {
   color: #64748b;
-
   font-size: 1.1rem;
 }
 
 .search-box input {
   width: 100%;
-
   border: none;
-
   outline: none;
-
   background: none;
-
   font-size: 15px;
 }
 
@@ -165,71 +110,46 @@ body {
   gap: 20px;
 }
 
-/* =========================
-   NOTIFICAÇÃO
-========================= */
-
 .notification-btn {
   width: 50px;
   height: 50px;
-
   border: none;
-
   background: white;
-
   border-radius: 14px;
-
   border: 1px solid #e2e8f0;
-
   cursor: pointer;
-
   transition: 0.25s;
 }
 
 .notification-btn:hover {
   transform: translateY(-2px);
-
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .notification-btn i {
   font-size: 1.2rem;
-
   color: #64748b;
 }
-
-/* =========================
-   USER INFO
-========================= */
 
 .user-info {
   display: flex;
   align-items: center;
   gap: 12px;
-
   background: white;
-
   border: 1px solid #e2e8f0;
-
   padding: 8px 12px;
-
   border-radius: 16px;
 }
 
 #avatar {
   width: 42px;
   height: 42px;
-
   border-radius: 50%;
-
   background: #3b82f6;
-
   color: white;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-weight: 700;
 }
 
@@ -237,43 +157,29 @@ body {
   font-weight: 600;
 }
 
-/* =========================
-   STATS
-========================= */
-
 .stats {
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-
   gap: 20px;
-
   margin-bottom: 40px;
 }
 
 .stat-card {
   background: white;
-
   border: 1px solid #e2e8f0;
-
   border-radius: 24px;
-
   padding: 25px;
-
   transition: 0.25s;
 }
 
 .stat-card:hover {
   transform: translateY(-5px);
-
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
 }
 
 .stat-card h3 {
   font-size: 2rem;
-
   color: #3b82f6;
-
   margin-bottom: 8px;
 }
 
@@ -281,39 +187,27 @@ body {
   color: #64748b;
 }
 
-/* =========================
-   RECENT NOTES
-========================= */
-
 .recent-notes h2 {
   margin-bottom: 20px;
-
   font-size: 1.7rem;
 }
 
 #recentNotesList {
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
   gap: 20px;
 }
 
 .note-card {
   background: white;
-
   border: 1px solid #e2e8f0;
-
   border-radius: 20px;
-
   padding: 24px;
-
   transition: 0.25s;
 }
 
 .note-card:hover {
   transform: translateY(-4px);
-
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
 }
 
@@ -323,31 +217,19 @@ body {
 
 .note-card span {
   display: inline-block;
-
   padding: 6px 12px;
-
   background: #dbeafe;
-
   color: #2563eb;
-
   border-radius: 999px;
-
   font-size: 0.85rem;
-
   font-weight: 600;
-
   margin-bottom: 12px;
 }
 
 .note-card p {
   color: #64748b;
-
   font-size: 0.9rem;
 }
-
-/* =========================
-   RESPONSIVO
-========================= */
 
 @media (max-width: 900px) {
   .sidebar {
@@ -386,9 +268,7 @@ body {
 @media (max-width: 768px) {
   .topbar {
     flex-direction: column;
-
     gap: 20px;
-
     align-items: stretch;
   }
 

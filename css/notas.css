@@ -1,42 +1,19 @@
-/* =========================
-   PALETA DE CORES
-========================= */
-
 :root {
-  /* Fundo */
   --bg-main: #f8fafc;
-
-  /* Cards */
   --bg-card: #ffffff;
-
-  /* Navbar */
   --nav-bg: #1e293b;
-
-  /* Principal */
   --primary: #3b82f6;
   --primary-hover: #2563eb;
-
-  /* Textos */
   --text-primary: #0f172a;
   --text-secondary: #64748b;
-
-  /* Bordas */
   --border: #e2e8f0;
-
-  /* Status */
   --success: #22c55e;
   --error: #ef4444;
   --warning: #f59e0b;
-
-  /* Sombras */
   --shadow-sm: 0 2px 10px rgba(15, 23, 42, 0.05);
   --shadow-md: 0 8px 25px rgba(15, 23, 42, 0.08);
   --shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.12);
 }
-
-/* =========================
-   RESET
-========================= */
 
 * {
   margin: 0;
@@ -54,20 +31,12 @@ body {
   min-height: 100vh;
 }
 
-/* =========================
-   CONTAINER
-========================= */
-
 .container {
   width: calc(100% - 340px);
   max-width: 1400px;
   margin: auto;
   padding: 40px 0;
 }
-
-/* =========================
-   HEADER
-========================= */
 
 .header {
   background: var(--bg-card);
@@ -84,19 +53,11 @@ body {
   color: var(--text-primary);
 }
 
-/* =========================
-   TOPO
-========================= */
-
 .actions-top {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
 }
-
-/* =========================
-   INPUTS
-========================= */
 
 input,
 textarea,
@@ -138,17 +99,11 @@ textarea {
   min-width: 250px;
 }
 
-/* =========================
-   BOTÕES
-========================= */
-
 button {
   border: none;
   cursor: pointer;
   transition: 0.3s;
 }
-
-/* Botão Nova Nota */
 
 #openModal {
   background: var(--primary);
@@ -170,10 +125,6 @@ button {
   background: var(--primary-hover);
 }
 
-/* =========================
-   GRID DE NOTAS
-========================= */
-
 .notes-grid {
   display: grid;
 
@@ -182,9 +133,6 @@ button {
   gap: 25px;
 }
 
-/* =========================
-   CARD
-========================= */
 
 .note {
   background: var(--bg-card);
@@ -222,10 +170,6 @@ button {
   margin-bottom: 15px;
 }
 
-/* =========================
-   BADGE
-========================= */
-
 .badge {
   display: inline-block;
 
@@ -244,10 +188,6 @@ button {
   margin-bottom: 15px;
 }
 
-/* =========================
-   RODAPÉ CARD
-========================= */
-
 .note-footer {
   display: flex;
 
@@ -261,10 +201,6 @@ button {
 .note-footer small {
   color: var(--text-secondary);
 }
-
-/* =========================
-   AÇÕES CARD
-========================= */
 
 .note-actions {
   display: flex;
@@ -290,10 +226,6 @@ button {
   background: #eff6ff;
 }
 
-/* =========================
-   ÍCONES
-========================= */
-
 .favorite {
   color: var(--warning);
 }
@@ -301,10 +233,6 @@ button {
 .pinned {
   color: var(--error);
 }
-
-/* =========================
-   MODAL
-========================= */
 
 .modal {
   position: fixed;
@@ -347,10 +275,6 @@ button {
   color: var(--text-primary);
 }
 
-/* =========================
-   FORMULÁRIO
-========================= */
-
 #noteForm {
   display: flex;
 
@@ -366,10 +290,6 @@ button {
 
   gap: 10px;
 }
-
-/* =========================
-   BOTÕES MODAL
-========================= */
 
 .modal-buttons {
   display: flex;
@@ -389,8 +309,6 @@ button {
   font-weight: 600;
 }
 
-/* Salvar */
-
 .modal-buttons button[type="submit"] {
   background: var(--success);
 
@@ -401,8 +319,6 @@ button {
   filter: brightness(0.95);
 }
 
-/* Cancelar */
-
 .cancel {
   background: var(--error);
 
@@ -412,10 +328,6 @@ button {
 .cancel:hover {
   filter: brightness(0.95);
 }
-
-/* =========================
-   NAVBAR OPCIONAL
-========================= */
 
 .sidebar {
   width: 260px;
@@ -470,10 +382,6 @@ button {
   display: flex;
 }
 
-/* =========================
-   RESPONSIVO
-========================= */
-
 @media (max-width: 768px) {
   .container {
     width: 95%;
@@ -491,10 +399,6 @@ button {
     grid-template-columns: 1fr;
   }
 }
-
-/* =========================
-   TABLETS
-========================= */
 
 @media (max-width: 992px) {
   .container {
@@ -514,10 +418,6 @@ button {
     max-width: 90%;
   }
 }
-
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 768px) {
   .sidebar {
@@ -559,7 +459,7 @@ button {
   }
 
   main.container {
-    margin-left: 0 !important;
+    margin-left: 0;
   }
 
   .header {
@@ -618,10 +518,6 @@ button {
     width: 100%;
   }
 }
-
-/* =========================
-   CELULARES PEQUENOS
-========================= */
 
 @media (max-width: 480px) {
   .container {
