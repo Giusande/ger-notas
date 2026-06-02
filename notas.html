@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>NoteFlow - Notas</title>
+
+    <link rel="stylesheet" href="./css/notas.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+      <div class="sidebar-logo">NoteFlow</div>
+
+      <nav>
+        <a href="dashboard.html">
+          <i class="fa-solid fa-house"></i>
+
+          Dashboard
+        </a>
+
+        <a href="categorias.html">
+          <i class="fa-solid fa-folder"></i>
+
+          Categorias
+        </a>
+
+        <a href="perfil.html">
+          <i class="fa-solid fa-user"></i>
+
+          Perfil
+        </a>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO -->
+
+    <main class="container" style="margin-left: 300px">
+      <!-- HEADER -->
+
+      <header class="header">
+        <h1>Minhas Notas</h1>
+
+        <div class="actions-top">
+          <input type="text" id="search" placeholder="Pesquisar nota..." />
+
+          <button id="openModal">
+            <i class="fa-solid fa-plus"></i>
+
+            Nova Nota
+          </button>
+        </div>
+      </header>
+
+      <!-- GRID DINÂMICA -->
+
+      <section class="notes-grid" id="notesGrid"></section>
+    </main>
+
+    <!-- MODAL -->
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <h2>Nova Nota</h2>
+
+        <form id="noteForm">
+          <input
+            type="text"
+            id="noteTitle"
+            placeholder="Título da nota"
+            required
+          />
+
+          <textarea
+            id="noteContent"
+            placeholder="Descrição da nota..."
+            required
+          >
+          </textarea>
+
+          <select id="noteCategory">
+            <option>Carregando categorias...</option>
+          </select>
+
+          <div class="favorite-box">
+            <input type="checkbox" id="favorite" style="width: auto" />
+
+            <label for="favorite"> Marcar como favorita </label>
+          </div>
+
+          <div class="modal-buttons">
+            <button type="submit">Salvar</button>
+
+            <button type="button" class="cancel">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/notas.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dashboard | NoteFlow</title>
+
+    <link rel="stylesheet" href="./css/dashboard.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="layout">
+      <!-- SIDEBAR -->
+
+      <aside class="sidebar">
+        <div class="logo">NoteFlow</div>
+
+        <nav>
+          <a href="#" class="active">
+            <i class="ri-home-5-line"></i>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="notas.html">
+            <i class="ri-sticky-note-line"></i>
+            <span>Notas</span>
+          </a>
+
+          <a href="categorias.html">
+            <i class="ri-price-tag-3-line"></i>
+            <span>Categorias</span>
+          </a>
+
+          <a href="perfil.html">
+            <i class="ri-user-line"></i>
+            <span>Perfil</span>
+          </a>
+
+          <a href="#" id="logoutBtn">
+            <i class="ri-logout-box-r-line"></i>
+            <span>Sair</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- CONTEÚDO -->
+
+      <main class="content">
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+          <div class="search-box">
+            <i class="ri-search-line"></i>
+
+            <input type="text" placeholder="Pesquisar notas..." />
+          </div>
+
+          <div class="top-actions">
+            <button class="notification-btn">
+              <i class="ri-notification-3-line"></i>
+            </button>
+
+            <div class="user-info">
+              <div id="avatar">G</div>
+
+              <span id="username"> Usuário </span>
+            </div>
+          </div>
+        </header>
+
+        <!-- RESUMO -->
+
+        <section class="stats">
+          <div class="stat-card">
+            <h3 id="totalNotes">0</h3>
+
+            <p>Total de Notas</p>
+          </div>
+
+          <div class="stat-card">
+            <h3 id="totalCategories">0</h3>
+
+            <p>Categorias</p>
+          </div>
+
+          <div class="stat-card">
+            <h3 id="favoriteNotes">0</h3>
+
+            <p>Favoritas</p>
+          </div>
+
+          <div class="stat-card">
+            <h3 id="lastNote">-</h3>
+
+            <p>Última Nota</p>
+          </div>
+        </section>
+
+        <!-- ÚLTIMAS NOTAS -->
+
+        <section class="recent-notes">
+          <h2>Últimas Notas</h2>
+
+          <div id="recentNotesList"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoteFlow | Organize suas ideias</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">NoteFlow</div>
+        <ul class="nav-links">
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><a href="#beneficios">Benefícios</a></li>
+        </ul>
+        <div class="guest-actions" id="guestActions">
+          <a href="login.html" class="btn-outline">Entrar</a>
+          <a href="cadastro.html" class="btn-primary">Cadastrar</a>
+        </div>
+
+        <div class="user-menu" id="userProfile" style="display: none">
+          <button class="user-trigger" id="userTrigger">
+            <div class="profile-icon" id="profileAvatar"></div>
+
+            <span id="welcomeText"></span>
+
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
+
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="perfil.html" class="dropdown-item">
+              <i class="ri-user-line"></i>
+              Meu Perfil
+            </a>
+
+            <button class="dropdown-item logout-btn" id="logoutBtn">
+              <i class="ri-logout-box-r-line"></i>
+              Sair
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="hero">
+        <div class="hero-content">
+          <span class="tag">Organize sua produtividade </span>
+          <h1>Transforme suas ideias em resultados.</h1>
+          <p>
+            Crie notas, organize categorias, favorite conteúdos importantes e
+            encontre tudo em segundos através de uma interface moderna e
+            intuitiva.
+          </p>
+          <div class="hero-buttons">
+            <a href="#" id="startBtn" class="btn-primary">
+              Começar Gratuitamente
+            </a>
+            <a href="#recursos" class="btn-outline"> Explorar Recursos </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1200"
+            alt="Dashboard do sistema"
+          />
+        </div>
+      </section>
+      <section id="recursos">
+        <div class="section-title">
+          <h2>Recursos Principais</h2>
+          <p>Tudo o que você precisa para organizar sua rotina.</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="card-icon">
+              <i class="ri-sticky-note-line"></i>
+            </div>
+            <h3>Notas Inteligentes</h3>
+            <p>Crie e organize suas anotações rapidamente.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="ri-price-tag-3-line"></i>
+            </div>
+            <h3>Categorias</h3>
+            <p>Organize conteúdos por temas e projetos.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="ri-star-line"></i>
+            </div>
+            <h3>Favoritos</h3>
+            <p>Salve suas notas mais importantes.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="ri-search-line"></i>
+            </div>
+            <h3>Pesquisa Rápida</h3>
+            <p>Encontre qualquer nota instantaneamente.</p>
+          </div>
+        </div>
+      </section>
+      <section id="como-funciona">
+        <div class="section-title">
+          <h2>Como Funciona</h2>
+          <p>Apenas quatro passos para organizar sua vida.</p>
+        </div>
+        <div class="steps-container">
+          <div class="step">
+            <h3>1</h3>
+            <p>Crie sua conta.</p>
+          </div>
+          <div class="step">
+            <h3>2</h3>
+            <p>Adicione suas notas.</p>
+          </div>
+          <div class="step">
+            <h3>3</h3>
+            <p>Organize por categorias.</p>
+          </div>
+          <div class="step">
+            <h3>4</h3>
+            <p>Acesse tudo rapidamente.</p>
+          </div>
+        </div>
+      </section>
+      <section id="beneficios">
+        <div class="section-title">
+          <h2>Por que usar o NoteFlow?</h2>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h3>Mais Produtividade</h3>
+            <p>Centralize todas as suas ideias em um único lugar.</p>
+          </div>
+          <div class="card">
+            <h3>Segurança Local</h3>
+            <p>Seus dados ficam armazenados diretamente no navegador.</p>
+          </div>
+          <div class="card">
+            <h3>Responsivo</h3>
+            <p>Funciona perfeitamente em desktop, tablet e celular.</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="cta">
+          <h2>Comece agora e organize suas ideias de forma inteligente.</h2>
+
+          <a href="cadastro.html" class="btn-primary"> Criar Minha Conta </a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div>
+          <h3>NoteFlow</h3>
+          <p>Organize suas notas, projetos e ideias em um só lugar.</p>
+        </div>
+        <div>
+          <h3>Links</h3>
+          <p>Recursos</p>
+          <p>Benefícios</p>
+          <p>Cadastro</p>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <p>contato@noteflow.com</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
