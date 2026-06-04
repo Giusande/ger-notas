@@ -42,31 +42,31 @@ function handleRegister(event) {
     clearError();
     
     if (!name || !email || !password || !confirmPassword) {
-        showError('Por favor, preencha todos os campos!');
+        Swal.fire({ icon: 'error', title: 'Campos incompletos', text: 'Por favor, preencha todos os campos!', confirmButtonColor: '#3b82f6' });
         return;
     }
     
 
     if (name.length < 3) {
-        showError('Nome completo deve ter pelo menos 3 caracteres!');
+        Swal.fire({ icon: 'error', title: 'Nome inválido', text: 'Nome completo deve ter pelo menos 3 caracteres!', confirmButtonColor: '#3b82f6' });
         return;
     }
     
     
     if (!isValidEmail(email)) {
-        showError('Por favor, insira um e-mail válido!');
+        Swal.fire({ icon: 'error', title: 'E-mail inválido', text: 'Por favor, insira um e-mail válido!', confirmButtonColor: '#3b82f6' });
         return;
     }
     
     
     if (password.length < 6) {
-        showError('A senha deve ter pelo menos 6 caracteres!');
+        Swal.fire({ icon: 'error', title: 'Senha fraca', text: 'A senha deve ter pelo menos 6 caracteres!', confirmButtonColor: '#3b82f6' });
         return;
     }
     
 
     if (password !== confirmPassword) {
-        showError('As senhas não coincidem!');
+        Swal.fire({ icon: 'error', title: 'Senhas não coincidem', text: 'As senhas digitadas não são iguais!', confirmButtonColor: '#3b82f6' });
         return;
     }
     
@@ -77,7 +77,7 @@ function handleRegister(event) {
     const emailExists = users.some(user => user.email === email);
     
     if (emailExists) {
-        showError('Este e-mail já está cadastrado!');
+        Swal.fire({ icon: 'error', title: 'E-mail já cadastrado', text: 'Este e-mail já está cadastrado!', confirmButtonColor: '#3b82f6' });
         return;
     }
    
@@ -94,7 +94,7 @@ function handleRegister(event) {
     localStorage.setItem('users', JSON.stringify(users));
     
     
-    showSuccess('Cadastro realizado com sucesso! Redirecionando para o login...');
+    Swal.fire({ icon: 'success', title: 'Cadastro realizado!', text: 'Conta criada com sucesso! Redirecionando...', timer: 2000, showConfirmButton: false });
     
     setTimeout(() => {
         window.location.href = 'login.html';

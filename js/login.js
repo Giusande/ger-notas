@@ -29,12 +29,12 @@ function handleLogin(event) {
   clearError();
 
   if (!email || !password) {
-    showError("Por favor, preencha todos os campos!");
+    Swal.fire({ icon: 'error', title: 'Campos incompletos', text: 'Por favor, preencha todos os campos!', confirmButtonColor: '#3b82f6' });
     return;
   }
 
   if (!isValidEmail(email)) {
-    showError("Por favor, insira um e-mail válido!");
+    Swal.fire({ icon: 'error', title: 'E-mail inválido', text: 'Por favor, insira um e-mail válido!', confirmButtonColor: '#3b82f6' });
     return;
   }
 
@@ -55,11 +55,13 @@ function handleLogin(event) {
       sessionStorage.setItem("session", JSON.stringify(session));
     }
 
+    Swal.fire({ icon: 'success', title: 'Login realizado!', text: `Bem-vindo(a), ${user.name}!`, timer: 1500, showConfirmButton: false });
+
     window.location.href = "index.html";
 
     console.log("Login realizado:", session);
   } else {
-    showError("E-mail ou senha incorretos!");
+    Swal.fire({ icon: 'error', title: 'Erro no login', text: 'E-mail ou senha incorretos!', confirmButtonColor: '#3b82f6' });
   }
 }
 
